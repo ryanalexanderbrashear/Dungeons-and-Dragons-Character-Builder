@@ -9,6 +9,7 @@
 import Foundation
 
 class Character {
+    //Character Stats
     let strength: Stat
     let dexterity: Stat
     let constitution: Stat
@@ -16,10 +17,12 @@ class Character {
     let wisdom: Stat
     let charisma: Stat
     
+    //Initiative Bonus
     var initiativeBonus: Int {
         return dexterity.modifier
     }
     
+    //Initializer
     init(strength: Stat, dexterity: Stat, constitution: Stat, intelligence: Stat, wisdom: Stat, charisma: Stat) {
         self.strength = strength
         self.dexterity = dexterity
@@ -29,12 +32,13 @@ class Character {
         self.charisma = charisma
     }
     
+    //Function to describe a character's stats and modifiers
     func describeStats() {
-        print("Strength: \(strength.score) Modifier: \(strength.modifier)")
-        print("Dexterity: \(dexterity.score) Modifier: \(dexterity.modifier)")
-        print("Constitution: \(constitution.score) Modifier: \(constitution.modifier)")
-        print("Intelligence: \(intelligence.score) Modifier: \(intelligence.modifier)")
-        print("Wisdom: \(wisdom.score) Modifier: \(wisdom.modifier)")
-        print("Charisma: \(charisma.score) Modifier: \(charisma.modifier)")
+        print("\(strength.name): \(strength.score) Modifier: \(strength.modifier)")
+        print("\(dexterity.name): \(dexterity.score) Modifier: \(dexterity.modifier)")
+        print("\(constitution.name): \(constitution.score) Modifier: \(constitution.modifier)")
+        print("\(intelligence.name): \(intelligence.score) Modifier: \(intelligence.modifier)")
+        print("\(wisdom.name): \(wisdom.score) Modifier: \(wisdom.modifier)")
+        print("\(charisma.name): \(charisma.score) Modifier: \(charisma.modifier)")
     }
 }
