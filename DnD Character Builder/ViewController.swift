@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let wisdom = Stat(name: .wisdom, score: 12)
         let charisma = Stat(name: .charisma, score: 12)
         
-        let character = Character(strength: strength, dexterity: dexterity, constitution: constitution, intelligence: intelligence, wisdom: wisdom, charisma: charisma)
+        let character = Character(name: "New Character", strength: strength, dexterity: dexterity, constitution: constitution, intelligence: intelligence, wisdom: wisdom, charisma: charisma)
         
         character.describeStats()
         

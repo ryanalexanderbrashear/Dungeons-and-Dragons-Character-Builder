@@ -9,6 +9,8 @@
 import Foundation
 
 class Character {
+    var name: String
+    
     //Character Stats
     let strength: Stat
     let dexterity: Stat
@@ -17,13 +19,9 @@ class Character {
     let wisdom: Stat
     let charisma: Stat
     
-    //Initiative Bonus
-    var initiativeBonus: Int {
-        return dexterity.modifier
-    }
-    
     //Initializer
-    init(strength: Stat, dexterity: Stat, constitution: Stat, intelligence: Stat, wisdom: Stat, charisma: Stat) {
+    init(name: String, strength: Stat, dexterity: Stat, constitution: Stat, intelligence: Stat, wisdom: Stat, charisma: Stat) {
+        self.name = name
         self.strength = strength
         self.dexterity = dexterity
         self.constitution = constitution
@@ -34,11 +32,11 @@ class Character {
     
     //Function to describe a character's stats and modifiers
     func describeStats() {
-        print("\(strength.name): \(strength.score) Modifier: \(strength.modifier)")
-        print("\(dexterity.name): \(dexterity.score) Modifier: \(dexterity.modifier)")
-        print("\(constitution.name): \(constitution.score) Modifier: \(constitution.modifier)")
-        print("\(intelligence.name): \(intelligence.score) Modifier: \(intelligence.modifier)")
-        print("\(wisdom.name): \(wisdom.score) Modifier: \(wisdom.modifier)")
-        print("\(charisma.name): \(charisma.score) Modifier: \(charisma.modifier)")
+        print("\(strength.name.rawValue): \(strength.score) Modifier: \(strength.modifier)")
+        print("\(dexterity.name.rawValue): \(dexterity.score) Modifier: \(dexterity.modifier)")
+        print("\(constitution.name.rawValue): \(constitution.score) Modifier: \(constitution.modifier)")
+        print("\(intelligence.name.rawValue): \(intelligence.score) Modifier: \(intelligence.modifier)")
+        print("\(wisdom.name.rawValue): \(wisdom.score) Modifier: \(wisdom.modifier)")
+        print("\(charisma.name.rawValue): \(charisma.score) Modifier: \(charisma.modifier)")
     }
 }
